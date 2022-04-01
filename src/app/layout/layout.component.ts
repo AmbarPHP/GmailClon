@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PaisesService } from '../services/paises.service';
+
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:PaisesService ) { }
 
   ngOnInit(): void {
+    this.FetchData();
+  }
+
+  FetchData(){
+    this.service.get('http://localhost:3000/paises').subscribe(respuesta=>{
+      console.log(respuesta);
+    })
   }
 
 }
