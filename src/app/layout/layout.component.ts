@@ -9,6 +9,8 @@ import { PaisesService } from '../services/paises.service';
 })
 export class LayoutComponent implements OnInit {
 
+  public lista_paises:any=[];
+
   constructor(private service:PaisesService ) { }
 
   ngOnInit(): void {
@@ -16,9 +18,10 @@ export class LayoutComponent implements OnInit {
   }
 
   FetchData(){
-    this.service.get('http://localhost:3000/paises').subscribe(respuesta=>{
-      console.log(respuesta);
-    })
+    this.service.get('http://localhost:3000/paises')
+    .subscribe(response =>{
+      console.log(response);
+      this.lista_paises = response} );
   }
 
 }

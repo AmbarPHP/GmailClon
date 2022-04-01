@@ -1,0 +1,15 @@
+<div class="content_list">
+  <div *ngFor="let item of lista_mails" >
+    <ul>
+      <li>
+        <div class="item_list">
+          <input value="{{item.check}}" type="checkbox" checked="item.check">
+          {{item.From}} 
+          {{item.Subject}}
+           {{item.Date}}
+          </div>
+        </li>
+    </ul>
+    
+  </div>
+</div>

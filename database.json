@@ -6,6 +6,56 @@
       "author": "typicode"
     }
   ],
+
+  "mails":[
+    {
+      "id":1,
+      "Subject": "An email" ,
+      "Date":   "Thu, 4 Mar 2010 15:35:32 -0800" ,
+      "From":   "george@info.com" 
+    },
+    {
+      "id":2,
+      "Subject": "Other subject" ,
+      "Date":   "Thu, 5 Mar 2010 15:35:32 -0800" ,
+      "From":   "baby@foo.com" 
+    },
+    {
+      "id":3,
+      "Subject": "Other subject" ,
+      "Date":   "Thu, 6 Mar 2010 15:35:32 -0800" ,
+      "From":   "baby@foo.com" 
+    }
+  ],
+
+  "mails_details":[
+    {
+      "id":1,
+      "Subject": "An email" ,
+      "Date":   "Thu, 4 Mar 2010 15:35:32 -0800" ,
+      "From":   "george@foo.com" ,
+      "Details": [
+        {"To":     ["marina@gmail.com", "ambar.com"]},
+        {"Sender": "paul@goo.com" },
+        {"cc":["ing.ricardo@gmail.com", "george@gmail.com"]},
+        {"Reply-to": ["paul@goo.com", "other@gmail.com"] },
+        {"attachments": [
+          {
+              "url": "https://www.example.com/attachment1.pdf",
+              "name": "attachment1.pdf",
+              "type": "application/pdf"
+          },
+          {
+              "data": "VGhpcyBpcyBqdXN0IGFuIGV4YW1wbGUgdGV4dCBmaWxlLi4=",
+              "name": "test.txt",
+              "type": "text/plain"
+          }
+        ]}
+      ],
+      "body":"Tuvalu, formerly known as the Ellice Islands, is located midway between Hawaii and Australia in the South Pacific Ocean. "
+    }
+        
+  ],
   "paises": [
     {
       "name": "France",
