@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { MailComponent } from './mail/mail.component';
+import { EnviadosComponent } from './enviados/enviados.component';
+import { LeftBarComponent } from './layout/left-bar/left-bar.component';
 
 
 
@@ -12,7 +14,9 @@ import { MailComponent } from './mail/mail.component';
   declarations: [
     AppComponent,
     LayoutComponent,
-    MailComponent
+    MailComponent,
+    EnviadosComponent,
+    LeftBarComponent
   ],
   imports: [
     BrowserModule,
