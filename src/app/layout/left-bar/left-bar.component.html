@@ -1,15 +1,24 @@
-<ul>
-
-    <li *ngFor="let item of grupos">
+<table>
+    <tr>
+        <div class="nuevo_mail">
+            
+        </div>
+    </tr>
+    <tr class="toggle_button">
+        <img class="icon" src="	https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_white_20dp.png" alt="">
+        <div class="button_header">Correo</div>
+    </tr>
+    <tr *ngFor="let item of grupos">
+        <td>
         <div class="menu">
-            <div class="icon"></div> 
-            <div class="text">{{item}}</div>
+            <img class="icon" src={{item.icon}} alt="">
+            <div class="text">{{item.name}}</div>
             <!-- <div clas="data">66:950</div> -->
         </div>
-
-    </li>
+        </td>
+    </tr>
     
-</ul>
+</table>
 
 
 

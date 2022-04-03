@@ -7,6 +7,9 @@ import { LayoutComponent } from './layout/layout.component';
 import { MailComponent } from './mail/mail.component';
 import { EnviadosComponent } from './enviados/enviados.component';
 import { LeftBarComponent } from './layout/left-bar/left-bar.component';
+import { SuperiorBarComponent } from './layout/superior-bar/superior-bar.component';
+
+import { FormBusquedaComponent } from './layout/form-busqueda/form-busqueda.component';
 
 
 
@@ -16,7 +19,10 @@ import { LeftBarComponent } from './layout/left-bar/left-bar.component';
     LayoutComponent,
     MailComponent,
     EnviadosComponent,
-    LeftBarComponent
+    LeftBarComponent,
+    SuperiorBarComponent,
+
+    FormBusquedaComponent
   ],
   imports: [
     BrowserModule,

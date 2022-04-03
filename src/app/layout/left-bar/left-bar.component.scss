@@ -1,16 +1,45 @@
+.toggle_button{
+    display:flex;
+    flex-direction: row;
+    .button_header{
+        font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+        font-size: 1rem;
+        letter-spacing: .2px;
+        color: #fff;
+        margin-left: 0.75rem;
+    
+        //text-shadow: 0 1px 2px rgba(241, 231, 231, 0.65);
+    }
+    img.icon{
+        margin-left: 0.5rem;
+        //background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px;
+      
+        //background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1x/schedule_send_white_20dp.png');
+    }
+}
+
+
+
 .menu{
-    background-color: rgb(33, 82, 82);
+    //background-color: rgb(33, 82, 82);
+    display:flex;
+    flex-direction: row;
     color:#fff;
+    margin-top:1rem;
+
     .text{
         font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
         font-size: .875rem;
         letter-spacing: .2px;
-        text-shadow: 0 1px 2px rgb(0 0 0 / 65%);
+        //text-shadow: 0 1px 2px rgba(241, 231, 231, 0.65)
     }
+
     .data{
         -webkit-font-smoothing: auto;
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    font-size: .75rem;
+    font-size: 1rem;
     letter-spacing: .3px;
     color: #fff;
     display: block;
@@ -18,10 +47,12 @@
     padding-left: 16px;
     text-shadow: 0 1px 2px rgb(0 0 0 / 65%);
     }
-    .icon{
-        background-image: url(https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png);
+    img.icon{
+        margin-left: 0.75rem;
+        margin-right:0.75rem;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 20px;
+        //background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1x/schedule_send_white_20dp.png');
     }
 }
