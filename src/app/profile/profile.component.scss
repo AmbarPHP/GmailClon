@@ -1,0 +1,33 @@
+
+
+ .img-overlay-wrap {
+    position: relative;
+    display: inline-block; /* <= shrinks container to image size */
+    transition: transform 150ms ease-in-out;
+  }
+  
+  .img-overlay-wrap img { /* <= optional, for responsiveness */
+     display: block;
+     max-width: 100%;
+     height: auto;
+     background-size: 32px 32px;
+    border: 0;
+    border-radius: 50%;
+    display: block;
+    margin: 0px;
+    position: relative;
+    top:4px;
+    left:4px;
+    width: 32px;
+    z-index: 0;
+  }
+  
+  .img-overlay-wrap svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .img-overlay-wrap:hover {
+    transform: rotate( 15deg );
+  }
