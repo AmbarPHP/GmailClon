@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-busqueda.component.scss']
 })
 export class FormBusquedaComponent implements OnInit {
-
+  //no tengo implementada la busqueda solo el html para el cascaron
   constructor() { }
 
   ngOnInit(): void {
