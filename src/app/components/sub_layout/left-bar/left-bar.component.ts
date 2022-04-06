@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FolderService} from "../../../services/folder.service";
+import {Folder} from "../../../models/folder.model";
 
 @Component({
   selector: 'app-left-bar',
@@ -8,10 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class LeftBarComponent implements OnInit {
 
   public grupos:any=[];
-  constructor() { }
+  public folders:any=[];
+  private url="";
+  constructor(private service:FolderService) { }
 
   ngOnInit(): void {
-    this.getGrupos();
+    this.getFolders();
+    console.log("cargar los folders");
+  }
+
+  public getFolders(){
+    this.url="http://localhost:3000/folders" 
+    this.service.getFolders(this.url).subscribe(response=>{
+      
+      console.log(response);
+      this.folders=response as Folder[];
+    })
+
   }
 
   public getGrupos(){

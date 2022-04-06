@@ -1,16 +1,10 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
+  
 
 
   "emails":[
      {
-    "idEmail":"1",
+    "emailId":"1",
     "folder":{
       "idFolder":"1",
       "folderName":"Recibidos",
@@ -22,7 +16,7 @@
     "isReaded":"true"
     },
     {
-      "idEmail":"2",
+      "emailId":"2",
       "folder":{
         "idFolder":"2",
         "folderName":"Enviados",
@@ -34,18 +28,65 @@
       "isReaded":"true"
       }
   ],
-
   "folders":[
+    {"forlderId":"1","folderDescription":"https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png",
+    "folderName":"Destacados"},
+    {"forlderId":"2","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/schedule_white_20dp.png",
+    "folderName":"Pospuestos"},
+    {"forlderId":"3","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/star_border_white_20dp.png",
+    "folderName":"Importantes"},
+    {"forlderId":"4","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/send_white_20dp.png",
+    "folderName":"Enviados"},
+    {"forlderId":"5","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm_filled/1x/label_gm_grey_24dp.png",
+    "folderName":"Tags"},
+    {"forlderId":"6","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/schedule_send_white_20dp.png",
+    "folderName":"Programados"},
+    {"forlderId":"7","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/insert_drive_file_white_20dp.png",
+    "folderName":"Borradores"},
+    {"forlderId":"8","folderDescription":"https://www.gstatic.com/images/icons/material/system/1x/inbox_white_20dp.png",
+    "folderName":"Todos"},
+    {"forlderId":"9","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/report_white_20dp.png",
+    "folderName":"Spam"},
+    {"forlderId":"10","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/delete_white_20dp.png",
+    "folderName":"Papelera"}
+],
+
+  "emailAddress":[{
+    "emailAddressId":"1",
+    "emailId":"1",
+    "addressId":"correo@gmail.com",
+    "addresTypeId":"1"
+
+  }],
+  "address":[
     {
-      "idFolder":"1",
-      "folderName":"Recibidos",
-      "forlderDescription":"los correos recibidos"
+      "addressId":"from@gmail.com",
+      "addressName":"Don From correo ",
+      "addressDescription":"picture, profile"
     },
     {
-      "idFolder":"2",
-      "folderName":"Enviados",
-      "forlderDescription":"los correos recibidos"
+      "addressId":"to@gmail.com",
+      "addressName":"Don To correo ",
+      "addressDescription":"picture, profile"
     }
+  ],
+  "addressType":[
+    {"addressTypeId":"1",
+     "addressTypeName":"Sender",
+     "addressTypeDescription":"El que envia"
+    },
+    {"addressTypeId":"",
+      "addressTypeName":"To",
+      "addressTypeDescription":"correo para alguien"
+     },
+     {"addressTypeId":"",
+      "addressTypeName":"CC",
+      "addressTypeDescription":"Con copia para"
+     },
+     {"addressTypeId":"",
+       "addressTypeName":"CCO",
+       "addressTypeDescription":"Con copia oculta para"
+      }
   ],
 
   "xmails":[
@@ -166,3 +207,5 @@
     "name": "typicode"
   }
 }
+
+

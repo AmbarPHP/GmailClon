@@ -8,11 +8,11 @@
         <img class="icon" src="	https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_white_20dp.png" alt="">
         <div class="button_header">Correo</div>
     </tr>
-    <tr *ngFor="let item of grupos">
+    <tr *ngFor="let folder of folders">
         <td>
         <div class="menu">
-            <img class="icon" src={{item.icon}} alt="">
-            <div class="text">{{item.name}}</div>
+            <img class="icon" src={{folder.folderDescription}} alt="">
+            <div class="text">{{folder.folderName}}</div>
             <!-- <div clas="data">66:950</div> -->
         </div>
         </td>
