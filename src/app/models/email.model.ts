@@ -1,27 +1,28 @@
-
-// import {mail_type} from "./email.interface";
+import {Folder} from "../models/folder.model";
 
 export class Email {
 
+    public idEmail:string;
+    public folder:Folder;
+    public subject:string;
+    public body: string;
+    public isStartred:Boolean;
+    public isReaded:Boolean;
+  
 
-    public constructor (
-        public id: number,
-        public from: string,
-        public subject:string,
-        public date:string, 
-        // public mail_type:mail_type,
-    ){
-
+    constructor (){
+     this.idEmail="";
+     this.folder= new Folder();
+     this.subject="";
+     this.body="";
+     this.isStartred=false;
+     this.isReaded=false;
     }
 
-//     export enum  mail_type{
-//     Enviado, 
-//     Recibido,
-//     Importante,
-//     Borrador,
-//     Spam,
-//     In_a_Category
-// }
+   
+}
+
+
 
 // export interface Detail{
 //  id_to:number;
@@ -32,4 +33,3 @@ export class Email {
 
 
 
-}

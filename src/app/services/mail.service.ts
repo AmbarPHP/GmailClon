@@ -55,7 +55,7 @@ export class MailService {
   }
 
   public deleteEmail(email:Email, url:string) {
-    return this.http.delete(`${url}/delete?idMascota=${email.id}`);
+    return this.http.delete(`${url}/delete?idMascota=${email.idEmail}`);
   }
 
   public updateEmail(email: Email, url:string) {

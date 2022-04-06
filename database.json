@@ -7,7 +7,48 @@
     }
   ],
 
-  "mails":[
+
+  "emails":[
+     {
+    "idEmail":"1",
+    "folder":{
+      "idFolder":"1",
+      "folderName":"Recibidos",
+      "forlderDescription":"los correos recibidos"
+    },
+    "subject":"Tema a tratar subject",
+    "body":"El mensaje enviado",
+    "isStartred":"true",
+    "isReaded":"true"
+    },
+    {
+      "idEmail":"2",
+      "folder":{
+        "idFolder":"2",
+        "folderName":"Enviados",
+        "forlderDescription":"los correos recibidos"
+      },
+      "subject":"subject",
+      "body":"el mensaje",
+      "isStartred":"true",
+      "isReaded":"true"
+      }
+  ],
+
+  "folders":[
+    {
+      "idFolder":"1",
+      "folderName":"Recibidos",
+      "forlderDescription":"los correos recibidos"
+    },
+    {
+      "idFolder":"2",
+      "folderName":"Enviados",
+      "forlderDescription":"los correos recibidos"
+    }
+  ],
+
+  "xmails":[
     {
       "id":1,
       "Subject": "An email" ,
