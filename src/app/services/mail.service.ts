@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Email} from '../models/email.model';
+import {AddressType} from '../models/address-type.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,32 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class MailService {
 
-  private grupos=[{}];
 
 
   constructor( private http:HttpClient) {
-    this.grupos=[
-     
-      {"id":1 ,"name":"Destacados"},
-      {"id":2 ,"name":"Pospuestos"},
-      {"id":3 ,"name":"Importantes"},
-      {"id":4 ,"name":"Enviados"},
    
-      {"id":5 ,"name":"Tags"},
-     
-      {"id":6 ,"name":"Programados"},
-      
-      {"id":7 ,"name":"Borradores"},
-      
-      {"id":8 ,"name":"Todos"},
-     
-      {"id":9 ,"name":"Spam"},
-      
-      {"id":10 ,"name":"Papelera"},
-      {"id":11 ,"name":"Categorias"},
-      {"id":12 ,"name":"Social"},
-      {"id":13 ,"name":"Gestionar Etiquetas"},
-      {"id":14 ,"name":"Nueva Etiqueta"}];
   }
 
 
@@ -41,9 +20,8 @@ export class MailService {
     return this.http.get<Email[]>(url);
   }
 
-  public getTipos(url:string){
-      return this.grupos;
-    
+  public getTiposMails(url:string){
+      
   }
 
   public getEmail(id: string | number, url:string) {

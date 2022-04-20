@@ -1,8 +1,9 @@
 import {Folder} from "../models/folder.model";
+import { EmailAddress } from "./email-address.model";
 
 export class Email {
 
-    public idEmail:string;
+    public idEmail:EmailAddress;
     public folder:Folder;
     public subject:string;
     public body: string;
@@ -11,7 +12,7 @@ export class Email {
   
 
     constructor (){
-     this.idEmail="";
+     this.idEmail=new EmailAddress();
      this.folder= new Folder();
      this.subject="";
      this.body="";

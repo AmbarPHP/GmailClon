@@ -12,7 +12,11 @@
         <td>
         <div class="menu">
             <img class="icon" src={{folder.folderDescription}} alt="">
-            <div class="text">{{folder.folderName}}</div>
+            <div class="text">
+                <a routerLink="/{{folder.folderName}}"
+                 routerLinkActive="active">
+                 {{folder.folderName}}</a>
+                 </div>
             <!-- <div clas="data">66:950</div> -->
         </div>
         </td>

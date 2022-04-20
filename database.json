@@ -1,7 +1,5 @@
 {
   
-
-
   "emails":[
      {
     "emailId":"1",
@@ -49,12 +47,11 @@
     "folderName":"Spam"},
     {"forlderId":"10","folderDescription":"https://www.gstatic.com/images/icons/material/system_gm/1x/delete_white_20dp.png",
     "folderName":"Papelera"}
-],
-
+  ],
   "emailAddress":[{
     "emailAddressId":"1",
     "emailId":"1",
-    "addressId":"correo@gmail.com",
+    "addressId":"from@gmail.com",
     "addresTypeId":"1"
 
   }],

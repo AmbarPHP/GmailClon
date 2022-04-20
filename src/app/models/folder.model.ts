@@ -10,10 +10,5 @@ export class Folder{
         this.folderDescription="";
     }
 
-    // Enviado, 
-    // Recibido,
-    // Importante,
-    // Borrador,
-    // Spam,
-    // In_a_Category
+    
 }
