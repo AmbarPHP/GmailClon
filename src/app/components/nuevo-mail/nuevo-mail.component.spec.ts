@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeftBarComponent } from './left-bar.component';
+import { NuevoMailComponent } from './nuevo-mail.component';
 
-describe('LeftBarComponent', () => {
-  let component: LeftBarComponent;
-  let fixture: ComponentFixture<LeftBarComponent>;
+describe('NuevoMailComponent', () => {
+  let component: NuevoMailComponent;
+  let fixture: ComponentFixture<NuevoMailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LeftBarComponent ]
+      declarations: [ NuevoMailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LeftBarComponent);
+    fixture = TestBed.createComponent(NuevoMailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

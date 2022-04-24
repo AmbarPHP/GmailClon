@@ -8,7 +8,7 @@
         <img class="icon" src="	https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_white_20dp.png" alt="">
         <div class="button_header">Correo</div>
     </tr>
-    <tr *ngFor="let folder of folders">
+    <tr *ngFor="let folder of folders ">
         <td>
         <div class="menu">
             <img class="icon" src={{folder.folderDescription}} alt="">
@@ -16,7 +16,7 @@
                 <a routerLink="/{{folder.folderName}}"
                  routerLinkActive="active">
                  {{folder.folderName}}</a>
-                 </div>
+            </div>
             <!-- <div clas="data">66:950</div> -->
         </div>
         </td>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Email } from '../../models/email.model';
-import {MailService} from '../../services/mail.service';
+import { MailService } from '../../services/mail.service';
 import { EmailAddress } from 'src/app/models/email-address.model';
 import { EmailAddressService } from 'src/app/services/email-address.service';
 
@@ -15,7 +15,7 @@ import { EmailAddressService } from 'src/app/services/email-address.service';
 export class MailComponent implements OnInit {
 
 
-  public lista_mails:Email[]=[];
+  public lista_mails:any[]=[];//Email[]=[];
  
 
   constructor(private service:MailService,private service2:EmailAddressService) {
@@ -23,31 +23,44 @@ export class MailComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.getMails();
+    this.getEmailType("Recibidos");
   }
 
-  public getMails(){
+ 
+  public getEmailType(mailType:string){
 
-    
-    //obtener aquellos mails recibidos
-    //select where type of address equals to type: sender
-    //select all addresstype= sender
+    console.log("entro a listar correos");
 
-
-    this.service.getEmails('http://localhost:3000/emails')
-    //this.service.getEmails('http://localhost:4001/getmails')
-    .subscribe(response=>{ 
-      console.log(response);
-      this.lista_mails=response as Email[];
+    if(mailType=="Recibidos")
+    {
+      this.service2.getEmailsAddress("http://localhost:4001/catalog/emailAddress").subscribe(response=>{
+        response=[{
+          addressName:"perlamarina.franco@gmail.com",
+          addressTypeName:"To",
+          folderName:"Enviados",
+          subject:"20 Easy Ways to Be More Productive as a Developer⚡️",
+        },
+        {
+          addressName:"daniel.franco@gmail.com",
+          addressTypeName:"To",
+          folderName:"Enviados",
+          subject:"20 Easy Ways to Be More Productive as a Developer⚡️",
+        },
+      ]
+        
+        this.lista_mails=response;
+        console.log("lista_mails",response);
       });
-  }
-
-  public getEmail(mailType:string){
-  
-    this.service2.getEmails("http:localhost:3000/emailAddress").subscribe(response=>{
-      console.log(response);
-    });
-    return ;
+      return ;
+    }
+    if(mailType=="Enviados")
+    {
+      this.service2.getEmailsAddress("http:localhost:4001/catalog/emailAddress").subscribe(response=>{
+        console.log(response);
+      });
+      return ;
+    }
+   
   }
 
 
