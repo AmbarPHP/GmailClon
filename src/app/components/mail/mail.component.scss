@@ -1,6 +1,27 @@
 .content_list{
-    background-color: #DDE6F0;
-    border-color: black;
+    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    background: rgb(228 232 232 / 80%);
+    color: #202124;
+    border-color: #202124;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+    width: 100vh;
+    li{
+    padding-bottom: 13px;
+    padding-top: 10px;
+    -webkit-box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%);
+    box-shadow: inset 0 -1px 0 0 rgb(100 121 143 / 12%);
+  
+
+        span{
+        -webkit-font-smoothing: antialiased;
+        font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+        font-size: .875rem;
+        letter-spacing: .2px;
+        }
+    }
 }
 input[type="checkbox" ] {
     background-color: #fff;

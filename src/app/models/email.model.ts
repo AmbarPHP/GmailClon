@@ -25,12 +25,6 @@ export class Email {
 
 
 
-// export interface Detail{
-//  id_to:number;
-//  id_cc:number;
-//  id_replay_to:number;
-//  id_atachment:number
-// }
 
 
 

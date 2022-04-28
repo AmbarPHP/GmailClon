@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Email } from '../../models/email.model';
 import { MailService } from '../../services/mail.service';
-import { EmailAddress } from 'src/app/models/email-address.model';
+import { EmailMock } from 'src/app/models/email-mock.model';
 import { EmailAddressService } from 'src/app/services/email-address.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -15,51 +16,31 @@ import { EmailAddressService } from 'src/app/services/email-address.service';
 export class MailComponent implements OnInit {
 
 
-  public lista_mails:any[]=[];//Email[]=[];
- 
+  //public lista_mails:Email[]=[];
+  public list:EmailMock[]=[];
+  
 
-  constructor(private service:MailService,private service2:EmailAddressService) {
+  constructor(private service:MailService,private service2:EmailAddressService, private route:ActivatedRoute ) {
   }
 
 
   ngOnInit(): void {
-    this.getEmailType("Recibidos");
+    this.getEmailType();
+                                                                                 
   }
-
  
-  public getEmailType(mailType:string){
+  public getEmailType(){
 
-    console.log("entro a listar correos");
+    const mailType=this.route.snapshot.paramMap.get('type')||'';
 
-    if(mailType=="Recibidos")
-    {
-      this.service2.getEmailsAddress("http://localhost:4001/catalog/emailAddress").subscribe(response=>{
-        response=[{
-          addressName:"perlamarina.franco@gmail.com",
-          addressTypeName:"To",
-          folderName:"Enviados",
-          subject:"20 Easy Ways to Be More Productive as a Developer⚡️",
-        },
-        {
-          addressName:"daniel.franco@gmail.com",
-          addressTypeName:"To",
-          folderName:"Enviados",
-          subject:"20 Easy Ways to Be More Productive as a Developer⚡️",
-        },
-      ]
-        
-        this.lista_mails=response;
-        console.log("lista_mails",response);
+    let type=mailType.toLowerCase();
+
+    this.service2.getEmailsType("http://localhost:4001/catalog/emailMock/"+type)
+      .subscribe(response=>{
+        this.list=response;
       });
-      return ;
-    }
-    if(mailType=="Enviados")
-    {
-      this.service2.getEmailsAddress("http:localhost:4001/catalog/emailAddress").subscribe(response=>{
-        console.log(response);
-      });
-      return ;
-    }
+    
+  
    
   }
 
