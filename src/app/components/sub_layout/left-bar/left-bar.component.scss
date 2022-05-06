@@ -1,6 +1,6 @@
 .toggle_button{
-    display:flex;
-    flex-direction: row;
+    display:grid;
+    grid-template-rows: 4fr;
     .button_header{
         font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
         font-size: 1rem;
@@ -21,38 +21,87 @@
 }
 
 
+.new_mail {
+    margin: 16px 0 16px 0;
+    height: 48px;
+    button{
+        
+        border-radius: 24px;
+        color: #d93025;
+        height: 48px;
+        padding: 0 24px 0 0;
+        min-width: 96px;
+        background-color: #eee;
+        padding-left: 18px;
+
+    }
+}
+
 
 .menu{
     //background-color: rgb(33, 82, 82);
-    display:flex;
-    flex-direction: row;
+    display:grid;
+    grid-template-columns: 1fr;
     color:#fff;
     margin-top:1rem;
+    height: 100%;
+    //background: linear-gradient(-45deg, #42d4f5, #42f333);
+  
+    .submenu{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 32px;
+        padding: 0 12px 0 26px;
+        img.icon{
+            margin-left: 0.75rem;
+            margin-right:0.75rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 20px;
+            //background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1x/schedule_send_white_20dp.png');
+        }
+        .text{
+            font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+            font-size: .875rem;
+            letter-spacing: .2px;
+            padding-right: 5px;
+            width: 80px;
 
-    .text{
-        font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-        font-size: .875rem;
-        letter-spacing: .2px;
-        //text-shadow: 0 1px 2px rgba(241, 231, 231, 0.65)
-    }
-
-    .data{
-        -webkit-font-smoothing: auto;
-    font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: auto;
+            vertical-align: middle;
+            a{
+                color: #eee;
+            }
+        }
+        .text:hover{
+            color: #eee;
+            font-weight: bold;
+           
+        }
+            
+        
+    
+        .data{
+            font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-size: .75rem;
     letter-spacing: .3px;
     color: #fff;
     display: block;
     margin-left: auto;
     padding-left: 16px;
     text-shadow: 0 1px 2px rgb(0 0 0 / 65%);
+        }
+        
+       
     }
-    img.icon{
-        margin-left: 0.75rem;
-        margin-right:0.75rem;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        //background-image: url('https://www.gstatic.com/images/icons/material/system_gm/1x/schedule_send_white_20dp.png');
+    .submenu:hover{
+        transition: margin-right 4s;
+        //transition: margin .15s cubic-bezier(0.4,0,0.2,1),padding .15s cubic-bezier(0.4,0,0.2,1);
     }
+    
 }

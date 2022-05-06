@@ -34,6 +34,7 @@ export class MailComponent implements OnInit {
     const mailType=this.route.snapshot.paramMap.get('type')||'';
 
     let type=mailType.toLowerCase();
+    console.log("Obtiene el tipo de folder",type);
 
     this.service2.getEmailsType("http://localhost:4001/catalog/emailMock/"+type)
       .subscribe(response=>{

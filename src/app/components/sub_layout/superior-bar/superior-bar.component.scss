@@ -1,86 +1,91 @@
-* {box-sizing: border-box;}
 
-/* Style the navbar */
 .topnav {
-  display: flex;
-  flex-direction:row;
-  justify-content:space-around;
-
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:auto;
   overflow: hidden;
-  //background-color: #200fbd;
-}
+  background-color: #200fbd;
 
-/* Navbar links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #fff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Navbar links on mouse-over */
-.topnav a:hover {
-  background-color: rgb(29, 53, 190);
-  color: rgb(247, 241, 241);
-}
-
-/* Active/current link */
-.topnav a.active {
-  background-color: #2196F3;
-  color: white;
-}
-
-/* Style the input container */
-.topnav .search-container {
- border: #fff;
-}
-
-/* Style the input field inside the navbar */
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
-
-/* Style the button inside the input container */
-.topnav .search-container button {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #ccc;
-}
-
-/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
+  div.burger_button{
+    padding-left: 12px;
+    background-color: #2196F3;
+    grid-column: 1 / span 1;
+    &:hover {
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 4px;
+      padding: 12px;
+      overflow: hidden;
+      vertical-align: middle;
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+    }
   }
-  .topnav a, .topnav input[type=text], .topnav .search-container button {
-    float: none;
+  div.brand{
+    padding-left: 12px;
+    //background-color: #f321ec;
+    grid-column: 2 / span 1;
+  }
+  div.search-container{
+    padding-left:  10px;
+    padding-bottom: 10px;
+    //background-color: #cdbe19;
+    grid-column: 3/span 6;
+  
+  }
+  
+   div.status{
+     margin-left: 12px;
+      border-radius: 24px;
+      height: 38px;
+      padding: 0 24px 0 0;
+      min-width: 60px;
+      background-color: #21b8f3;
+      padding-left: 18px;
+      padding-top: 1%;
+      grid-column: 9/span 1;
+  }
+  
+  div.iconos_help {
+    grid-column: 10/span 1;
+
+    i{
+      width: 20px; height: 20px;
+      padding-left: 10px;
+    }
+    
+  }
+
+  div.apps{
+
+    grid-column: 11/span 1;
+    img{
+      width: 20px; height: 20px;
+  }
+    
+  }
+  div.profile{
+    grid-column: 12/span 1;
+  }
+
+  
+  a {
+    float: left;
     display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    &:hover {
+      background-color: rgb(29, 53, 190);
+      color: rgb(247, 241, 241);
+    }
+    .active {
+      background-color: #2196F3;
+      color: white;
+    }
+  
   }
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-
-.topnav .iconos_help i{
-  margin-left:40px;
-   
 }

@@ -3,7 +3,7 @@
     padding:10px;
     
 
-    background: #f1f3f4;
+    background-color: rgba($color: #fff, $alpha: 0.5);
     border: 1px solid transparent;
     -webkit-border-radius: 8px;
     border-radius: 8px;
@@ -18,9 +18,12 @@
         background: none;
         border: none;
         cursor: pointer;
-        outline: none;
         padding: 0 5px;
         line-height: 0;
+        img{
+            width: 20px; height: 20px;
+        }
+       
     }
 
 }

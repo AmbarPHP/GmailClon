@@ -1,33 +1,44 @@
+.grid {
+  display: grid;
+  background-image: url("../assets/img/Wallpaper.jpg");
+  grid-template-columns: 1fr;
+  width: 100vw;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
 
-  .content{
-    background-image: url("../assets/img/Wallpaper.jpg");
-    display:flex;
-    flex-direction: column;
-
-    .colum_superior{
-      //background:#200fbd;
-      height:20vh;
-    }
-
-    .colum_main{
-      //background: rgb(221, 169, 26);
-      height:80vh;
-      display: flex;
-      flex-direction: row;
-
-      .side_menu{
-        //background: rgb(48, 153, 6);
-        width: 20%;
-      }
-
-      .main_area{
-        //background: rgb(248, 246, 248);
-        width: 80%;
-      }
-    }
+  @media (min-width: 500px) {
+    grid-template-columns: 1fr;
   }
 
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-  
-  
-  
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  div.colum_superior {
+    //background:#200fbd;
+    height: 10vh;
+  }
+
+  div.colum_main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    //background: rgb(221, 169, 26);
+    height: 80vh;
+    div.side_menu {
+      background: rgb(48, 153, 6);
+      grid-column: 1 / span 1;
+    }
+
+    div.main_area {
+      background: rgb(135, 48, 135);
+      grid-column: 2 / span 5;
+    }
+  }
+}

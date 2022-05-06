@@ -1,7 +1,7 @@
-<table>
+<table class="menu">
     <tr>
-        <div class="nuevo_mail">
-            
+        <div class="new_mail">
+            <button> Redactar</button>
         </div>
     </tr>
     <tr class="toggle_button">
@@ -10,14 +10,14 @@
     </tr>
     <tr *ngFor="let folder of folders ">
         <td>
-        <div class="menu">
+        <div class="submenu" >
             <img class="icon" src={{folder.folderDescription}} alt="">
             <div class="text">
                 <a routerLink="mail/{{folder.folderName}}"
                  routerLinkActive="active">
                  {{folder.folderName}}</a>
             </div>
-            <!-- <div clas="data">66:950</div> -->
+            <div class="data">66:950</div> 
         </div>
         </td>
     </tr>

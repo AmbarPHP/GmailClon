@@ -1,17 +1,19 @@
-<div>
-    
-    <div class="topnav">
-        <div>
-          <i class='fa fa-navicon fa-2x' 
-          style='margin-left:40px; 
-          margin-top:20px; color: white'></i>
-        </div>
+ <div class="topnav">
         
-        <a href="#contact">
-            <img class="gb_zc" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r2.png" srcset="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_2x_r2.png 2x ,https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r2.png 1x" alt="" aria-hidden="true" style="width:109px;height:40px">
-        </a>
+        <div class="burger_button" >
+        <button (click)="toggleMenu()">
+          <i class='fa fa-bars fa-2x' style='color: white'></i>
+        </button>
+        </div>
+         
+        <div class="brand">
+          <img class="brand_img" src="../../../../assets/img/logo_gmail_lockup_dark_1x_r2.png">
+        </div>
         <div class="search-container">
           <app-form-busqueda></app-form-busqueda>
+        </div>
+        <div class="status">
+          
         </div>
         <div class="iconos_help">
           <i class='fa fa-question-circle-o fa-2x' style=' color: white'></i>
@@ -19,11 +21,13 @@
           <i class='fa-solid fa-table-cells fa-2x' style='color: white'></i>
           <i class='fa-solid fa-list-check fa-2x'></i>
         </div>
+        <div class="apps">
+          <img src = "../../../../assets/img/apps.svg"  />
+          
+        </div>
+       <div class="profile">
+        <app-profile></app-profile>
+       </div>
        
-      <app-profile></app-profile>
 
-      </div>
-</div>
-<!-- <img class="gb_zc" 
-  src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r2.png" srcset="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_2x_r2.png 2x ,https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_dark_1x_r2.png 1x" alt="" aria-hidden="true" style="width:109px;height:40px">
-     -->
+  </div>
