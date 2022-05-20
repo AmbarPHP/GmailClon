@@ -16,6 +16,7 @@ export class LeftBarComponent implements OnInit {
   //pasarlo por mendio de un servicio
   @Input()
   public navbarCollapsed:boolean=true;
+  public toggle_menu:boolean=true;
 
   
   
@@ -23,7 +24,6 @@ export class LeftBarComponent implements OnInit {
 
   ngOnInit(): void {
    this.getFolders();
-   
   }
 
 
