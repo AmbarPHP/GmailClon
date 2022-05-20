@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter} from '@angular/core';
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
@@ -8,11 +8,15 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 })
 export class SuperiorBarComponent implements OnInit {
 
+ //navbarCollapsed:boolean=true;
 
+  @Output() onToggle: EventEmitter <any> = new  EventEmitter()
   constructor() { }
 
   toggleMenu(){
-    console.log('Se ha hecho clic sobre el boton del menu');
+    //this.navbarCollapsed = !this.navbarCollapsed;
+    this.onToggle.emit();
+    console.log('Se ha emitido');
   }
 
   ngOnInit(): void {

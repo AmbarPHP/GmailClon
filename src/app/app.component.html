@@ -1,10 +1,12 @@
-<div class="grid">
+<div class="grid" >
     <div class="colum_superior">
-      <app-superior-bar></app-superior-bar>
+      <app-superior-bar (onToggle)="toggleButton()" ></app-superior-bar>
     </div>
     <div class="colum_main">
-      <div class="side_menu"><app-left-bar></app-left-bar></div>
-      <div class="main_area">
+      <div class="side_menu" [ngClass]="navbarCollapsed?'class1':'class2'" >
+        <app-left-bar [navbarCollapsed]="navbarCollapsed"></app-left-bar>
+      </div>
+      <div class="main_area" [ngClass]="navbarCollapsed?'class1':'class2'">
         <router-outlet></router-outlet>
       </div>
     </div>

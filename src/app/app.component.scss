@@ -25,20 +25,32 @@
     //background:#200fbd;
     height: 10vh;
   }
-
   div.colum_main {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    //background: rgb(221, 169, 26);
+    grid-template-columns: repeat(10, 1fr);
+    background-color: inherit;
     height: 80vh;
-    div.side_menu {
-      background: rgb(48, 153, 6);
+  
+    //clases añadidad
+    div.side_menu.class1{
+      background-color: inherit;
+      transform: translate3d(0, 0, 0) !important;
+      visibility: visible !important;
+      overflow: hidden;
       grid-column: 1 / span 1;
     }
-
-    div.main_area {
-      background: rgb(135, 48, 135);
-      grid-column: 2 / span 5;
+    div.side_menu.class2{
+      background-color: #1f144d;
+      grid-column: 1 / span 3;
+    }
+  
+    div.main_area.class1 {
+      background: rgb(41, 157, 30);
+      grid-column: 2 / span 9;
+    }
+    div.main_area.class2 {
+      background: rgb(221, 208, 221);
+      grid-column: 4 / span 7;
     }
   }
 }

@@ -21,7 +21,7 @@
 }
 
 
-.new_mail {
+.new_mail .open {
     margin: 16px 0 16px 0;
     height: 48px;
     button{
@@ -31,6 +31,22 @@
         height: 48px;
         padding: 0 24px 0 0;
         min-width: 96px;
+        background-color: #eee;
+        padding-left: 18px;
+
+    }
+}
+
+.new_mail .narrow {
+    margin: 16px 0 16px 0;
+    height: 48px;
+    button{
+        
+        border-radius: 24px;
+        color: #3d25d9;
+        height: 48px;
+        padding: 0 24px 0 0;
+        min-width: 36px;
         background-color: #eee;
         padding-left: 18px;
 
@@ -53,8 +69,9 @@
         height: 32px;
         padding: 0 12px 0 26px;
         img.icon{
-            margin-left: 0.75rem;
+            margin-left: -0.25rem;
             margin-right:0.75rem;
+            padding-right: 2rem;
             background-position: center;
             background-repeat: no-repeat;
             background-size: 20px;
@@ -81,23 +98,21 @@
         .text:hover{
             color: #eee;
             font-weight: bold;
-           
         }
+        
+        
+      
             
-        
-    
         .data{
-            font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    font-size: .75rem;
-    letter-spacing: .3px;
-    color: #fff;
-    display: block;
-    margin-left: auto;
-    padding-left: 16px;
-    text-shadow: 0 1px 2px rgb(0 0 0 / 65%);
+        font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+        font-size: .75rem;
+        letter-spacing: .3px;
+        color: #fff;
+        display: block;
+        margin-left: auto;
+        padding-left: 16px;
+        text-shadow: 0 1px 2px rgb(0 0 0 / 65%);
         }
-        
-       
     }
     .submenu:hover{
         transition: margin-right 4s;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {FolderService} from "../../../services/folder.service";
 import {Folder} from "../../../models/folder.model";
 
@@ -13,6 +13,10 @@ export class LeftBarComponent implements OnInit {
   //Todo, me falta estudiar como definir le tipado
   public folders:Folder[]=[];
   private url="";
+  //pasarlo por mendio de un servicio
+  @Input()
+  public navbarCollapsed:boolean=true;
+
   
   
   constructor(private service:FolderService) { }
@@ -21,6 +25,7 @@ export class LeftBarComponent implements OnInit {
    this.getFolders();
    
   }
+
 
   public getFolders(){
     this.url="http://localhost:4001/catalog/folders";

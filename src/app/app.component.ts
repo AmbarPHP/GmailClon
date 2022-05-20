@@ -13,5 +13,12 @@ export class AppComponent implements OnInit {
     
   }
 
+  navbarCollapsed:boolean=true;
+
+  toggleButton(){
+    this.navbarCollapsed = !this.navbarCollapsed;
+    console.log('Se ha hecho clic sobre el boton del menu',this.navbarCollapsed);
+  }
+
 }
 

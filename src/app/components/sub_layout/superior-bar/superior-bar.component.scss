@@ -4,22 +4,21 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:auto;
   overflow: hidden;
-  background-color: #200fbd;
+  //background-color: #200fbd;
 
   div.burger_button{
     padding-left: 12px;
-    background-color: #2196F3;
     grid-column: 1 / span 1;
     &:hover {
       border-radius: 50%;
-      display: inline-block;
-      margin: 0 4px;
-      padding: 12px;
-      overflow: hidden;
-      vertical-align: middle;
-      cursor: pointer;
-      height: 24px;
-      width: 24px;
+      // display: inline-block;
+      // margin: 0 4px;
+      // padding: 12px;
+      // overflow: hidden;
+      // vertical-align: middle;
+      // cursor: pointer;
+      // height: 24px;
+      // width: 24px;
     }
   }
   div.brand{
@@ -89,3 +88,35 @@
   
   }
 }
+
+///
+
+div.colum_main {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  background-color: inherit;
+  height: 80vh;
+
+  //clases añadidad
+  div.side_menu.class1{
+   
+    transform: translate3d(0, 0, 0) !important;
+    visibility: visible !important;
+    overflow: hidden;
+    grid-column: 1 / span 1;
+  }
+  div.side_menu.class2{
+    background-color: #1f144d;
+    grid-column: 1 / span 3;
+  }
+
+  div.main_area.class1 {
+    background: rgb(41, 157, 30);
+    grid-column: 2 / span 9;
+  }
+  div.main_area.class2 {
+    background: rgb(221, 208, 221);
+    grid-column: 4 / span 7;
+  }
+}
+

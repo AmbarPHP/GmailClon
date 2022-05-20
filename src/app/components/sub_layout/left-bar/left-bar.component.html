@@ -1,10 +1,10 @@
 <table class="menu">
     <tr>
-        <div class="new_mail">
+        <!-- <div [ngClass]="toggle_menu==true? 'new_mail open': 'new_mail narrow'">
             <button> Redactar</button>
-        </div>
+        </div> -->
     </tr>
-    <tr class="toggle_button">
+    <tr >
         <img class="icon" src="	https://www.gstatic.com/images/icons/material/system/1x/arrow_drop_down_white_20dp.png" alt="">
         <div class="button_header">Correo</div>
     </tr>
@@ -12,7 +12,7 @@
         <td>
         <div class="submenu" >
             <img class="icon" src={{folder.folderDescription}} alt="">
-            <div class="text">
+            <div class="text" >
                 <a routerLink="mail/{{folder.folderName}}"
                  routerLinkActive="active">
                  {{folder.folderName}}</a>
@@ -23,8 +23,3 @@
     </tr>
     
 </table>
-
-
-
-
-
